@@ -105,7 +105,7 @@ use Illuminate\Support\Facades\Cookie;
 							</li>
 
 							<li>
-								<a href="<?php echo url('/blog'); ?>">Blog</a>
+								<a href="{{route('blog.index')}}">Blog</a>
 							</li>
 
 							<li>
@@ -228,7 +228,7 @@ use Illuminate\Support\Facades\Cookie;
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="{{route('blog')}}">Blog</a>
+						<a href="{{route('blog.index')}}">Blog</a>
 					</li>
 
 					<li class="item-menu-mobile">

@@ -92,7 +92,7 @@
 							</li>
 
 							<li>
-								<a href="{{url('/blog')}}">Blog</a>
+								<a href="{{route('blog.index')}}">Blog</a>
 							</li>
 
 							<li>
@@ -212,7 +212,7 @@
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="{{route('blog')}}">Blog</a>
+						<a href="{{route('blog.index')}}">Blog</a>
 					</li>
 
 					<li class="item-menu-mobile">

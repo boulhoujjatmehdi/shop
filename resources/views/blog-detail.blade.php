@@ -62,7 +62,7 @@
 			<div class="wrap_header">
 				<!-- Logo -->
 				<a href="<?php echo url('/'); ?>" class="logo">
-					<img src="images/icons/logo.png" alt="IMG-LOGO">
+					<img src="{{url('')}}/images/icons/logo.png" alt="IMG-LOGO">
 				</a>
 
 				<!-- Menu -->
@@ -83,7 +83,7 @@
 							</li>
 
 							<li>
-								<a href="<?php echo url('/blog'); ?>">Blog</a>
+								<a href="{{route('blog.index')}}">Blog</a>
 							</li>
 
 							<li>
@@ -101,7 +101,7 @@
 				<div class="header-icons">
 					<div href="#" class="header-wrapicon1 dis-block">
 					<a href="{{route('login')}}">
-						<img src="images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<img src="{{url('')}}/images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
 					</a>
 						
 
@@ -116,7 +116,7 @@
 
 					<div class="header-wrapicon2">
 					<a href="{{route('cart.index')}}">
-						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<img src="{{url('')}}/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
 					</a>
 						<span class="header-icons-noti">{{$totalCart ?? '0'}}</span>						
 					</div> 
@@ -129,7 +129,7 @@
 		<div class="wrap_header_mobile">
 			<!-- Logo moblie -->
 			<a href="<?php echo url('/'); ?>" class="logo-mobile">
-				<img src="images/icons/logo.png" alt="IMG-LOGO">
+				<img src="{{url('')}}/images/icons/logo.png" alt="IMG-LOGO">
 			</a>
 
 			<!-- Button show menu -->
@@ -137,14 +137,14 @@
 				<!-- Header Icon mobile -->
 				<div class="header-icons-mobile">
 					<a href="{{route('login')}}" class="header-wrapicon1 dis-block">
-						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+						<img src="{{url('')}}/images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
 					</a>
 
 					<span class="linedivide2"></span>
 
 					<div class="header-wrapicon2" >
 						<a href="{{route('cart.index')}}">
-							<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+							<img src="{{url('')}}/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
 						   	<span class="header-icons-noti">{{$totalCart ?? '0'}}</span>
 						</a>
 					</div>
@@ -203,7 +203,7 @@
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="{{route('blog')}}">Blog</a>
+						<a href="{{route('blog.index')}}">Blog</a>
 					</li>
 
 					<li class="item-menu-mobile">
@@ -218,22 +218,7 @@
 		</div>
 	</header>
 
-	<!-- breadcrumb -->
-	<div class="bread-crumb bgwhite flex-w p-l-52 p-r-15 p-t-30 p-l-15-sm">
-		<a href="index.html" class="s-text16">
-			Home
-			<i class="fa fa-angle-right m-l-8 m-r-9" aria-hidden="true"></i>
-		</a>
 
-		<a href="blog.html" class="s-text16">
-			Blog
-			<i class="fa fa-angle-right m-l-8 m-r-9" aria-hidden="true"></i>
-		</a>
-
-		<span class="s-text17">
-			Black Friday Guide: Best Sales & Discount Codes
-		</span>
-	</div>
 
 	<!-- content page -->
 	<section class="bgwhite p-t-60 p-b-25">
@@ -243,41 +228,24 @@
 					<div class="p-r-50 p-r-0-lg">
 						<div class="p-b-40">
 							<div class="blog-detail-img wrap-pic-w">
-								<img src="images/blog-04.jpg" alt="IMG-BLOG">
+							<img src="{{url('')}}/images/blog-04.jpg" alt="IMG-BLOG">
 							</div>
 
 							<div class="blog-detail-txt p-t-33">
 								<h4 class="p-b-11 m-text24">
-									Black Friday Guide: Best Sales & Discount Codes
+									{{$blog->title}}
 								</h4>
 
 								<div class="s-text8 flex-w flex-m p-b-21">
 									<span>
-										By Admin
-										<span class="m-l-3 m-r-6">|</span>
-									</span>
-
-									<span>
-										28 Dec, 2018
-										<span class="m-l-3 m-r-6">|</span>
-									</span>
-
-									<span>
-										Cooking, Food
-										<span class="m-l-3 m-r-6">|</span>
-									</span>
-
-									<span>
-										8 Comments
+										By {{$author}}							
 									</span>
 								</div>
 
-								<p class="p-b-25">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed turpis sed lorem dignissim vulputate nec cursus ante. Nunc sit amet tempor magna. Donec eros sem, porta eget leo et, varius eleifend mauris. Donec eu leo congue, faucibus quam eu, viverra mauris. Nulla consectetur lorem mi, at scelerisque metus hendrerit vitae. Proin vel magna vel neque porta ultricies non eget mauris. Suspendisse potenti.
-								</p>
 
 								<p class="p-b-25">
-									Aliquam faucibus scelerisque placerat. Vestibulum vel libero eu nulla varius pretium eget eu magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean dictum faucibus felis, ac vestibulum risus mollis in. Phasellus neque dolor, euismod vitae auctor eget, dignissim a felis. Etiam malesuada elit a nibh aliquam, placerat ultricies nibh dictum. Nam ut egestas velit. Pellentesque viverra tincidunt tellus. Etiam cursus, ligula id vehicula cursus, turpis mauris facilisis massa, eget tincidunt est purus et odio. Nam quis luctus libero, non posuere velit. Ut eu varius diam, eu euismod elit. Donec efficitur, neque eu consectetur consectetur, dui sem consectetur felis, vitae rutrum risus urna vel arcu. Aliquam semper ullamcorper laoreet. Sed arcu lectus, fermentum imperdiet purus eu, ornare ornare libero.
+
+									{{$blog->content}}
 								</p>
 							</div>
 
@@ -334,7 +302,7 @@
 
 				<div class="col-md-4 col-lg-3 p-b-80">
 					<div class="rightbar">
-						<!-- Search -->
+						{{-- <!-- Search -->
 						<div class="pos-relative bo11 of-hidden">
 							<input class="s-text7 size16 p-l-23 p-r-50" type="text" name="search-product" placeholder="Search">
 
@@ -378,7 +346,7 @@
 									DIY & Crafts
 								</a>
 							</li>
-						</ul>
+						</ul> --}}
 
 						<!-- Featured Products -->
 						<h4 class="m-text23 p-t-65 p-b-34">
@@ -388,7 +356,7 @@
 						<ul class="bgwhite">
 							<li class="flex-w p-b-20">
 								<a href="product-detail.html" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
-									<img src="images/item-16.jpg" alt="IMG-PRODUCT">
+									<img src="{{url('')}}/images/item-16.jpg" alt="IMG-PRODUCT">
 								</a>
 
 								<div class="w-size23 p-t-5">
@@ -404,7 +372,7 @@
 
 							<li class="flex-w p-b-20">
 								<a href="product-detail.html" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
-									<img src="images/item-17.jpg" alt="IMG-PRODUCT">
+									<img src="{{url('')}}/images/item-17.jpg" alt="IMG-PRODUCT">
 								</a>
 
 								<div class="w-size23 p-t-5">
@@ -420,7 +388,7 @@
 
 							<li class="flex-w p-b-20">
 								<a href="product-detail.html" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
-									<img src="images/item-08.jpg" alt="IMG-PRODUCT">
+									<img src="{{url('')}}/images/item-08.jpg" alt="IMG-PRODUCT">
 								</a>
 
 								<div class="w-size23 p-t-5">
@@ -436,7 +404,7 @@
 
 							<li class="flex-w p-b-20">
 								<a href="product-detail.html" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
-									<img src="images/item-03.jpg" alt="IMG-PRODUCT">
+									<img src="{{url('')}}/images/item-03.jpg" alt="IMG-PRODUCT">
 								</a>
 
 								<div class="w-size23 p-t-5">
@@ -452,7 +420,7 @@
 
 							<li class="flex-w p-b-20">
 								<a href="product-detail.html" class="dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4">
-									<img src="images/item-05.jpg" alt="IMG-PRODUCT">
+									<img src="{{url('')}}/images/item-05.jpg" alt="IMG-PRODUCT">
 								</a>
 
 								<div class="w-size23 p-t-5">
@@ -467,7 +435,7 @@
 							</li>
 						</ul>
 
-						<!-- Archive -->
+						{{-- <!-- Archive -->
 						<h4 class="m-text23 p-t-50 p-b-16">
 							Archive
 						</h4>
@@ -578,8 +546,8 @@
 
 							<a href="#" class="tag-item">
 								Crafts
-							</a>
-						</div>
+							</a> 
+						</div>--}}
 					</div>
 				</div>
 			</div>
@@ -730,23 +698,23 @@
 
 		<div class="t-center p-l-15 p-r-15">
 			<a href="#">
-				<img class="h-size2" src="images/icons/paypal.png" alt="IMG-PAYPAL">
+				<img class="h-size2" src="{{url('')}}/images/icons/paypal.png" alt="IMG-PAYPAL">
 			</a>
 
 			<a href="#">
-				<img class="h-size2" src="images/icons/visa.png" alt="IMG-VISA">
+				<img class="h-size2" src="{{url('')}}/images/icons/visa.png" alt="IMG-VISA">
 			</a>
 
 			<a href="#">
-				<img class="h-size2" src="images/icons/mastercard.png" alt="IMG-MASTERCARD">
+				<img class="h-size2" src="{{url('')}}/images/icons/mastercard.png" alt="IMG-MASTERCARD">
 			</a>
 
 			<a href="#">
-				<img class="h-size2" src="images/icons/express.png" alt="IMG-EXPRESS">
+				<img class="h-size2" src="{{url('')}}/images/icons/express.png" alt="IMG-EXPRESS">
 			</a>
 
 			<a href="#">
-				<img class="h-size2" src="images/icons/discover.png" alt="IMG-DISCOVER">
+				<img class="h-size2" src="{{url('')}}/images/icons/discover.png" alt="IMG-DISCOVER">
 			</a>
 
 			<div class="t-center s-text8 p-t-20">

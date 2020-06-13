@@ -15,11 +15,9 @@ use App\Cart;
 
 Route::get('/', 'localController@index')->name('fash');
 
-Route::get('/blog', function () {
-    if(Auth::user()){$carts = Cart::where('user_id' , Auth::user()->id)->count();}
+Route::resource('/blog', 'BlogController');
 
-    return view('blog', ['totalCart'=>$carts ?? '0']);
-})->name('blog');
+
 
 Route::get('/contact', function () {if(Auth::user()){$carts = Cart::where('user_id' , Auth::user()->id)->count();}
     return view('contact', ['totalCart'=>$carts ?? '0']);
