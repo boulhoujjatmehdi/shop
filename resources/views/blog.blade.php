@@ -270,16 +270,12 @@
 
 					</div>
 
-					<!-- Pagination -->
-					<div class="pagination flex-m flex-w p-r-50">
-						<a href="#" class="item-pagination flex-c-m trans-0-4 active-pagination">1</a>
-						<a href="#" class="item-pagination flex-c-m trans-0-4">2</a>
-					</div>
+
 				</div>
 
 				<div class="col-md-4 col-lg-3 p-b-75">
 					<div class="rightbar">
-						<!-- Search -->
+						{{-- <!-- Search -->
 						<div class="pos-relative bo11 of-hidden">
 							<input class="s-text7 size16 p-l-23 p-r-50" type="text" name="search-product" placeholder="Search">
 
@@ -323,7 +319,7 @@
 									DIY & Crafts
 								</a>
 							</li>
-						</ul>
+						</ul> --}}
 
 						<!-- Featured Products -->
 						<h4 class="m-text23 p-t-65 p-b-34">
@@ -412,7 +408,7 @@
 							</li>
 						</ul>
 
-						<!-- Archive -->
+						{{-- <!-- Archive -->
 						<h4 class="m-text23 p-t-50 p-b-16">
 							Archive
 						</h4>
@@ -524,7 +520,7 @@
 							<a href="#" class="tag-item">
 								Crafts
 							</a>
-						</div>
+						</div> --}}
 					</div>
 				</div>
 			</div>

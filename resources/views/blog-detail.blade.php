@@ -233,7 +233,7 @@
 
 							<div class="blog-detail-txt p-t-33">
 								<h4 class="p-b-11 m-text24">
-									{{$blog->title}}
+									{{substr( $blog->title , 0 , strlen($blog->title)-1)}}
 								</h4>
 
 								<div class="s-text8 flex-w flex-m p-b-21">
