@@ -391,9 +391,16 @@
 
 				<div class="size15 trans-0-4">
 					<!-- Button -->
-					<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
+				<form method="POST" class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4"action="{{route('pay')}}">
+					@csrf
+				<input type="hidden" name = "price"  value="{{$total}}" >
+				<input type="hidden" name = "name"  value="your going to the pay this cart " >
+				
+					<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" >
 						Proceed to Checkout
 					</button>
+					</form>
+
 				</div>
 			</div>
 		</div>

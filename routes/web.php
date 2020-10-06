@@ -37,3 +37,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/product/short/{cate}', 'ProductController@category')->name('cate');
 
 Route::view('/productdetail', 'productdetail')->name('productdetail');
+Route::view('/productdetail', 'productdetail')->name('productdetail');
+Route::post('/pay', 'PaymentController@PayWithPaypal')->name('pay');
+Route::get('/status ', 'PaymentController@status')->name('status');
+Route::get('/canceled ', 'PaymentController@canceled')->name('canceled');
+
+
